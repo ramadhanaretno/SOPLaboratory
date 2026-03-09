@@ -1,14 +1,70 @@
-$brandColor: darkorchid;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-body {
-  font-family: system-ui, sans-serif;
-  background: linear-gradient(to bottom,
-    $brandColor,
-    darken($brandColor, 15%)
-  );
-  color: white;
-  height: 100vh;
-  margin: 0;
-  display: grid;
-  place-items: center;
+body{
+font-family:'Poppins', sans-serif;
+background:linear-gradient(135deg,#eef3ff,#ffffff);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* Container */
+.container{
+text-align:center;
+width:900px;
+}
+
+/* Logo */
+.logo-area img{
+width:80px;
+margin-bottom:10px;
+}
+
+.logo-area h2{
+color:#1e3c72;
+font-size:20px;
+}
+
+.logo-area p{
+color:#f4b400;
+margin-bottom:40px;
+font-weight:500;
+font-size:26px;
+letter-spacing:2px;
+}
+
+/* Grid Menu */
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+/* Menu Box */
+.menu-box{
+background:white;
+padding:30px;
+border-radius:18px;
+text-decoration:none;
+color:#1e3c72;
+font-weight:500;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+min-height:120px;
+}
+
+.menu-box:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+background:#1e3c72;
+color:white;
 }
