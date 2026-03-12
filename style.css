@@ -181,3 +181,29 @@ max-width:100%;
 height:auto;
 }
 
+/* SOP Viewer */
+
+.viewer-full{
+width:100%;
+margin-top:30px;
+display:flex;
+justify-content:center;
+}
+
+.viewer-full img{
+width:100%;
+max-width:1200px;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* responsive HP */
+
+@media (max-width:768px){
+
+.viewer-full img{
+width:100%;
+border-radius:10px;
+}
+
+}
