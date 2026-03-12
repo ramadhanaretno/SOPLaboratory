@@ -176,3 +176,8 @@ transform:translateY(-2px);
 position:relative;
 }
 
+img{
+max-width:100%;
+height:auto;
+}
+
