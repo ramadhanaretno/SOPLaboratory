@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,14 +9,13 @@
 <style>
 
 /* reset */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-/* halaman fullscreen */
+/* body fullscreen */
 
 body{
 background:#111;
@@ -26,9 +24,32 @@ display:flex;
 justify-content:center;
 align-items:center;
 overflow:auto;
+font-family:Arial, sans-serif;
 }
 
-/* container gambar */
+/* tombol kembali */
+
+.back-button{
+position:fixed;
+top:20px;
+left:20px;
+background:rgba(255,255,255,0.9);
+color:#333;
+padding:8px 16px;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+transition:all 0.2s ease;
+}
+
+.back-button:hover{
+background:white;
+transform:scale(1.05);
+}
+
+/* viewer */
 
 .viewer{
 width:100%;
@@ -39,7 +60,7 @@ align-items:center;
 padding:20px;
 }
 
-/* gambar flowchart */
+/* gambar */
 
 .viewer img{
 max-width:100%;
@@ -48,7 +69,7 @@ box-shadow:0 10px 40px rgba(0,0,0,0.6);
 border-radius:8px;
 }
 
-/* responsive HP */
+/* HP */
 
 @media (max-width:768px){
 
@@ -60,6 +81,13 @@ padding:10px;
 width:100%;
 }
 
+.back-button{
+top:15px;
+left:15px;
+font-size:13px;
+padding:7px 14px;
+}
+
 }
 
 </style>
@@ -67,6 +95,8 @@ width:100%;
 </head>
 
 <body>
+
+<a href="sop-perpustakaan.html" class="back-button">← Kembali</a>
 
 <div class="viewer">
 
