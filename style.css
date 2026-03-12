@@ -152,19 +152,27 @@ background-position:0% 50%;
 }
 }
 .back-button{
-display:inline-block;
-margin-bottom:25px;
-padding:10px 20px;
-background:#1e3c72;
-color:white;
+position:absolute;
+top:25px;
+left:25px;
+background:white;
+color:#1e3c72;
+padding:8px 16px;
+border-radius:30px;
 text-decoration:none;
-border-radius:10px;
 font-size:14px;
-transition:0.3s;
+font-weight:500;
+box-shadow:0 4px 15px rgba(0,0,0,0.15);
+transition:all 0.3s ease;
 }
 
 .back-button:hover{
-background:#16325c;
+background:#1e3c72;
+color:white;
 transform:translateY(-2px);
+}
+
+.container{
+position:relative;
 }
 
