@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Peminjaman Buku Ruang Baca</title>
+
+<style>
+
+/* reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* halaman fullscreen */
+
+body{
+background:#111;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:auto;
+}
+
+/* container gambar */
+
+.viewer{
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+/* gambar flowchart */
+
+.viewer img{
+max-width:100%;
+height:auto;
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+border-radius:8px;
+}
+
+/* responsive HP */
+
+@media (max-width:768px){
+
+.viewer{
+padding:10px;
+}
+
+.viewer img{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="viewer">
+
+<img src="Perpustakaan/peminjaman-buku-ruang-baca.png" 
+alt="Flowchart Peminjaman Buku Ruang Baca">
+
+</div>
+
+</body>
+</html>
