@@ -151,3 +151,20 @@ background-position:100% 50%;
 background-position:0% 50%;
 }
 }
+.back-button{
+display:inline-block;
+margin-bottom:25px;
+padding:10px 20px;
+background:#1e3c72;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:14px;
+transition:0.3s;
+}
+
+.back-button:hover{
+background:#16325c;
+transform:translateY(-2px);
+}
+
