@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOP Layanan Akademik</title>
+<title>SOP Layanan Akademik - Universitas Jember</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,7 +15,7 @@
 
 <div class="container">
 
-<a href="index.html" class="back-button">← Kembali</a>
+<a href="index.html" class="back-button">← Dashboard</a>
 
 <div class="logo-area">
 <img src="logo.png" alt="Logo Universitas Jember">
@@ -24,37 +25,74 @@
 
 <div class="menu-grid">
 
-<a href="#" class="menu-box">
-Prosedur Pendaftaran Wisuda
-</a>
+<a href="#" class="menu-box"
+data-image="Layanan_Akademik/wisuda.png"
+onclick="openFlowchart(this)">
+Prosedur Pendaftaran Wisuda </a>
 
-<a href="#" class="menu-box">
-Pemrosesan Transkrip Akademik
-</a>
+<a href="#" class="menu-box"
+data-image="Layanan_Akademik/transkrip.png"
+onclick="openFlowchart(this)">
+Pemrosesan Transkrip Akademik </a>
 
-<a href="#" class="menu-box">
-Pemrosesan Ijazah
-</a>
+<a href="#" class="menu-box"
+data-image="Layanan_Akademik/ijazah.png"
+onclick="openFlowchart(this)">
+Pemrosesan Ijazah </a>
 
-<a href="#" class="menu-box">
-Surat Keterangan Lulus
-</a>
+<a href="#" class="menu-box"
+data-image="Layanan_Akademik/skl.png"
+onclick="openFlowchart(this)">
+Surat Keterangan Lulus </a>
 
-<a href="#" class="menu-box">
-Surat Keterangan Masih Kuliah
-</a>
+<a href="#" class="menu-box"
+data-image="Layanan_Akademik/sk-masih-kuliah.png"
+onclick="openFlowchart(this)">
+Surat Keterangan Masih Kuliah </a>
 
-<a href="#" class="menu-box">
-Pengaduan Mahasiswa Sebelum Masuk UC 3
-</a>
+<a href="#" class="menu-box"
+data-image="Layanan_Akademik/pengaduan.png"
+onclick="openFlowchart(this)">
+Pengaduan Mahasiswa Sebelum Masuk UC 3 </a>
 
-<a href="#" class="menu-box">
-Pelaksanaan Kuliah dalam Kondisi Gangguan Sistem / Listrik Padam (Pemutihan)
-</a>
+<a href="#" class="menu-box"
+data-image="Layanan_Akademik/pemutihan.png"
+onclick="openFlowchart(this)">
+Pelaksanaan Kuliah dalam Kondisi Gangguan Sistem / Listrik Padam (Pemutihan) </a>
 
 </div>
 
 </div>
+
+<!-- FLOWCHART VIEWER -->
+
+<div id="flowchartViewer" class="flowchart-modal">
+
+<span class="close-flowchart" onclick="closeFlowchart()">✕</span>
+
+<img id="flowchartImage" src="" alt="Flowchart SOP">
+
+</div>
+
+<script>
+
+function openFlowchart(element){
+
+let image = element.getAttribute("data-image");
+
+document.getElementById("flowchartImage").src = image;
+
+document.getElementById("flowchartViewer").style.display="flex";
+
+}
+
+function closeFlowchart(){
+
+document.getElementById("flowchartViewer").style.display="none";
+
+}
+
+</script>
 
 </body>
 </html>
