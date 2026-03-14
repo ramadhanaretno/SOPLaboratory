@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
+<body>
+
 <div class="container">
+
+<a href="index.html" class="back-button">← Dashboard</a>
 
 <div class="logo-area">
 <img src="logo.png" alt="Logo Universitas Jember">
@@ -16,33 +23,71 @@
 <p>UNIVERSITAS JEMBER</p>
 </div>
 
-<a href="index.html" class="back-button">← Dashboard</a>
-
 <div class="menu-grid">
 
-<a href="#" class="menu-box">
-Alur Peminjaman Alat
-</a>
+<a href="#" class="menu-box"
+data-image="Laboratorium/peminjaman-alat.png"
+onclick="openFlowchart(this)">
+Alur Peminjaman Alat </a>
 
-<a href="#" class="menu-box">
-Alur Pengembalian Alat
-</a>
+<a href="#" class="menu-box"
+data-image="Laboratorium/pengembalian-alat.png"
+onclick="openFlowchart(this)">
+Alur Pengembalian Alat </a>
 
-<a href="#" class="menu-box">
-Alur Pemakaian Lab
-</a>
+<a href="#" class="menu-box"
+data-image="Laboratorium/pemakaian-lab.png"
+onclick="openFlowchart(this)">
+Alur Pemakaian Lab </a>
 
-<a href="#" class="menu-box">
-Alur Peminjaman Lab Diluar Jadwal
-</a>
+<a href="#" class="menu-box"
+data-image="Laboratorium/peminjaman-lab-diluar-jadwal.png"
+onclick="openFlowchart(this)">
+Alur Peminjaman Lab Diluar Jadwal </a>
 
-<a href="#" class="menu-box">
-Alur Peminjaman Alat Diluar Jam Kerja
-</a>
+<a href="#" class="menu-box"
+data-image="Laboratorium/peminjaman-alat-diluar-jam-kerja.png"
+onclick="openFlowchart(this)">
+Alur Peminjaman Alat Diluar Jam Kerja </a>
 
-<a href="#" class="menu-box">
-Alur Pengembalian Alat Diluar Jam Kerja
-</a>
+<a href="#" class="menu-box"
+data-image="Laboratorium/pengembalian-alat-diluar-jam-kerja.png"
+onclick="openFlowchart(this)">
+Alur Pengembalian Alat Diluar Jam Kerja </a>
 
 </div>
+
 </div>
+
+<!-- FLOWCHART VIEWER -->
+
+<div id="flowchartViewer" class="flowchart-modal">
+
+<span class="close-flowchart" onclick="closeFlowchart()">✕</span>
+
+<img id="flowchartImage" src="" alt="Flowchart SOP">
+
+</div>
+
+<script>
+
+function openFlowchart(element){
+
+let image = element.getAttribute("data-image");
+
+document.getElementById("flowchartImage").src = image;
+
+document.getElementById("flowchartViewer").style.display="flex";
+
+}
+
+function closeFlowchart(){
+
+document.getElementById("flowchartViewer").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
