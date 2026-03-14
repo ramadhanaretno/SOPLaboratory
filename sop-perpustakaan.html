@@ -24,11 +24,15 @@
 
 <div class="menu-grid">
 
-<a href="#" class="menu-box" onclick="openFlowchart()">
+<a href="#" class="menu-box"
+data-image="Perpustakaan/peminjaman-buku-ruang-baca.png"
+onclick="openFlowchart(this)">
 Peminjaman Buku Ruang Baca
 </a>
 
-<a href="#" class="menu-box" onclick="openFlowchartPengembalian()">
+<a href="#" class="menu-box"
+data-image="Perpustakaan/pengembalian-buku-ruang-baca.png"
+onclick="openFlowchart(this)">
 Pengembalian Buku Ruang Baca
 </a>
 
@@ -36,36 +40,35 @@ Pengembalian Buku Ruang Baca
 
 </div>
 
+<!-- FLOWCHART VIEWER -->
 
-  <div id="flowchartViewer" class="flowchart-modal">
-    <span class="close-flowchart" onclick="closeFlowchart()">✕</span>
-    <img src="Perpustakaan/peminjaman-buku-ruang-baca.png" alt="Flowchart Peminjaman Buku">
+<div id="flowchartViewer" class="flowchart-modal">
+
+<span class="close-flowchart" onclick="closeFlowchart()">✕</span>
+
+<img id="flowchartImage" src="" alt="Flowchart SOP">
+
 </div>
 
-  <div id="flowchartViewerPengembalian" class="flowchart-modal">
-    <span class="close-flowchart" onclick="closeFlowchartPengembalian()">✕</span>
-    <img src="Perpustakaan/pengembalian-buku-ruang-baca.png" alt="Flowchart Pengembalian Buku">
-</div>
+<script>
 
-  <script>
+function openFlowchart(element){
 
-function openFlowchart(){
+let image = element.getAttribute("data-image");
+
+document.getElementById("flowchartImage").src = image;
+
 document.getElementById("flowchartViewer").style.display="flex";
+
 }
 
 function closeFlowchart(){
+
 document.getElementById("flowchartViewer").style.display="none";
-}
 
-function openFlowchartPengembalian(){
-document.getElementById("flowchartViewerPengembalian").style.display="flex";
-}
-
-function closeFlowchartPengembalian(){
-document.getElementById("flowchartViewerPengembalian").style.display="none";
 }
 
 </script>
-  
+
 </body>
 </html>
