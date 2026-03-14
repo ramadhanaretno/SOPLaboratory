@@ -28,7 +28,7 @@
 Peminjaman Buku Ruang Baca
 </a>
 
-<a href="pengembalian-buku.html" class="menu-box">
+<a href="#" class="menu-box" onclick="openFlowchartPengembalian()">
 Pengembalian Buku Ruang Baca
 </a>
 
@@ -42,7 +42,13 @@ Pengembalian Buku Ruang Baca
     <img src="Perpustakaan/peminjaman-buku-ruang-baca.png" alt="Flowchart Peminjaman Buku">
 </div>
 
+  <div id="flowchartViewerPengembalian" class="flowchart-modal">
+    <span class="close-flowchart" onclick="closeFlowchartPengembalian()">✕</span>
+    <img src="Perpustakaan/pengembalian-buku-ruang-baca.png" alt="Flowchart Pengembalian Buku">
+</div>
+
   <script>
+
 function openFlowchart(){
 document.getElementById("flowchartViewer").style.display="flex";
 }
@@ -50,6 +56,15 @@ document.getElementById("flowchartViewer").style.display="flex";
 function closeFlowchart(){
 document.getElementById("flowchartViewer").style.display="none";
 }
+
+function openFlowchartPengembalian(){
+document.getElementById("flowchartViewerPengembalian").style.display="flex";
+}
+
+function closeFlowchartPengembalian(){
+document.getElementById("flowchartViewerPengembalian").style.display="none";
+}
+
 </script>
   
 </body>
